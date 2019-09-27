@@ -16,8 +16,7 @@ echo 'Add .env file'
 cp .env.dist .env
 
 echo 'Add initial database'
-mysqladmin -h localhost -u user -ppassword create findapitch
-mysql -h localhost -u user -ppassword findapitch < api/data/initialdb.sql
+docker exec -i $(docker ps -aqf "name=findapitch_db_1") mysql -uuser -ppassword findapitch < data/initialdb.sql
 
 echo 'Run tests'
 cp phpunit.xml.dist phpunit.xml && ./vendor/bin/simple-phpunit tests/PitchControllerTests.php
