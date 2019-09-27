@@ -7,7 +7,6 @@ An API which conceptualises the search for a pitch and a slot within that pitch.
  - [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable)
  - [Symfony Server](https://symfony.com/doc/current/setup/symfony_server.html)
  - [Docker](https://docs.docker.com/docker-for-mac/install/)
- - [MySQL](https://sequelpro.com/docs/ref/mysql/install-on-osx)
 
 ## Setup
 
