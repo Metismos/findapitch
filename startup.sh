@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo 'Spin up database'
-docker-composer up -d
+docker-compose up -d
 
 echo 'Symfony security check'
 symfony security:check --dir=api
