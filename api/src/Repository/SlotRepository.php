@@ -25,8 +25,8 @@ class SlotRepository extends ServiceEntityRepository
     {
         $slotInUse = $this->createQueryBuilder('p')
             ->select('COUNT(p.id)')
-            ->where('(p.starts > :starts AND p.starts < :ends) OR (p.ends > :starts AND p.ends < :ends)')
-            // ->where('(p.starts BETWEEN :starts AND :ends) OR (p.ends BETWEEN :starts AND :ends)')
+            ->where('(p.starts > :starts AND p.starts < :ends) OR (p.ends > :starts AND p.ends < :ends) OR (p.starts = :starts AND p.ends = p.ends)')
+            ->andWhere('p.isAvailable = 0')
             ->setParameter('starts', $slot->getStarts())
             ->setParameter('ends', $slot->getEnds())
             ->getQuery()->getSingleScalarResult()

@@ -79,7 +79,7 @@ class PitchControllerTests extends OurWebTestCase
             [],
             [], 
             ['Content_Type' => 'application/json'], 
-            '[{"starts":"2016-11-04T13:00:00+00:00","ends":"2016-11-04T14:00:00+00:00","price":66,"currency":"GBP","isAvailable":true},{"starts":"2016-11-04T14:00:00+00:00","ends":"2016-11-04T15:00:00+00:00","price":66,"currency":"EUR","isAvailable":true}]'
+            '[{"starts":"2016-11-04T13:00:00+00:00","ends":"2016-11-04T14:00:00+00:00","price":66,"currency":"GBP","isAvailable":false},{"starts":"2016-11-04T14:00:00+00:00","ends":"2016-11-04T15:00:00+00:00","price":66,"currency":"EUR","isAvailable":false}]'
         );
 
         $actual = $this->client->getResponse();
@@ -131,7 +131,7 @@ class PitchControllerTests extends OurWebTestCase
             [],
             [], 
             ['Content_Type' => 'application/json'], 
-            '[{"starts":"2016-11-04T10:00:00+00:00","ends":"2016-11-04T11:00:00+00:00","price":66,"currency":"GBP","isAvailable":true},{"starts":"2016-11-04T14:00:00+00:00","ends":"2016-11-04T15:00:00+00:00","price":66,"currency":"EUR","isAvailable":true}]'
+            '[{"starts":"2016-11-04T10:00:00+00:00","ends":"2016-11-04T11:00:00+00:00","price":66,"currency":"GBP","isAvailable":false},{"starts":"2016-11-04T14:00:00+00:00","ends":"2016-11-04T15:00:00+00:00","price":66,"currency":"EUR","isAvailable":false}]'
         );
 
         $actual = $this->client->getResponse();

@@ -99,9 +99,9 @@ class Slot implements SlotInterface, PriceInterface
      * @Groups({"listSlots", "addSlots"})
      * 
      * @Assert\Type(type="bool")
-     * @Assert\IsTrue(message="A slot cannot be added if it's availablity is passed as false.")
+     * @Assert\IsFalse(message="A slot cannot be added if it's availablity is passed as true, as slots by definition are the holding of a space of time.")
      */
-    private $isAvailable = true;
+    private $isAvailable = false;
 
     /**
      * The pitch to which this slot is for.
