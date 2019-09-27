@@ -1,0 +1,18 @@
+nelmio_api_doc:
+    areas: # to filter documented areas
+        path_patterns:
+            - ^/api(?!(/doc|/doc.json)$) # Accepts routes under /api except /api/doc or doc.json
+    documentation:
+        schemes: [http,https]
+        info:
+            title: Find A Pitch
+            description: An API which conceptualises the search for a pitch and a slot within that pitch.
+            version: 1.0.0
+        parameters:
+            id:
+                name: id
+                required: true
+                in: path
+                type: string
+                description: UUID of a pitch.
+
